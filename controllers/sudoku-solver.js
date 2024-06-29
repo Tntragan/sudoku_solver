@@ -150,6 +150,9 @@ class SudokuSolver {
   }
 
   solveSudoku(board) {
+    if (board.constructor !== Array) {
+      board = this.stringToBoard(board);
+    }
     let row = -1;
     let col = -1;
     let isEmpty = true;
